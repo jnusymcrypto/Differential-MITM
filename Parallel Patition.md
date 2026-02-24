@@ -82,33 +82,32 @@ $\blacktriangleright$ 由于需要 $2^p$ 个明文来保证至少找到一个正
 
 1. 判断截断差分轨迹是否有效（将其与 PRP 对比）：
 
-   
-   $$
-   \begin{align}
-   P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})>P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})=\frac{|\Delta_{out}|}{n}
-   \end{align}
-   $$
+$$
+\begin{align}
+P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})>P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})=\frac{|\Delta_{out}|}{n}
+\end{align}
+$$
 
 2. 截断差分有方向：
 
    
-   $$
-   \begin{align}
-   P(\Delta_{in}\stackrel{E^{-1}}{\longrightarrow}\Delta_{out})=P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})\times \frac{|\Delta_{in}|}{|\Delta_{out}|}
-   \end{align}
-   $$
+$$
+\begin{align}
+P(\Delta_{in}\stackrel{E^{-1}}{\longrightarrow}\Delta_{out})=P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})\times \frac{|\Delta_{in}|}{|\Delta_{out}|}
+\end{align}
+$$
 
 3. 截断差分在组 Pairs 之后（全猜密钥）数据量为：
 
    期望获得的正确 Pair 数量为 $s$ 
 
    
-   $$
-   \begin{align}
-   s \times |\Delta_{in}|\ (resp. |\Delta_{out}|)
-   \end{align}
-   $$
-   
+$$
+\begin{align}
+s \times |\Delta_{in}|\ (resp. |\Delta_{out}|)
+\end{align}
+$$
+
 
 
 
