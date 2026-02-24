@@ -78,14 +78,18 @@ $\blacktriangleright$ 由于需要 $2^p$ 个明文来保证至少找到一个正
 
 在 improved Parallel Partition 之前，需要先厘清 truncated differential 是什么. 以下介绍几个小点，对比其与 differential (characteristic) 的不同：
 
-注意：$\Delta_{in}$ 和 $\Delta_{out}$ 可以不为差分特征，即 $|\Delta_{in}|\ge 1$ 和/或 $\Delta_{out}\ge 1$.
+注意： $\Delta_{in}$ 和 $\Delta_{out}$ 可以不为差分特征，即 $|\Delta_{in}|\ge 1$ 和/或 $\Delta_{out}\ge 1$.
 
 1. 判断截断差分轨迹是否有效（将其与 PRP 对比）：
+
+   
    $$
    P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})>P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})=\frac{|\Delta_{out}|}{n}
    $$
 
 2. 截断差分有方向：
+
+   
    $$
    P(\Delta_{in}\stackrel{E^{-1}}{\longrightarrow}\Delta_{out})=P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})\times \frac{|\Delta_{in}|}{|\Delta_{out}|}
    $$
@@ -93,6 +97,8 @@ $\blacktriangleright$ 由于需要 $2^p$ 个明文来保证至少找到一个正
 3. 截断差分在组 Pairs 之后（全猜密钥）数据量为：
 
    期望获得的正确 Pair 数量为 $s$ 
+
+   
    $$
    s \times |\Delta_{in}|\ (resp. |\Delta_{out}|)
    $$
