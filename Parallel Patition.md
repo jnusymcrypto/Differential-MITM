@@ -67,3 +67,39 @@ $\blacktriangleright$ 由于需要 $2^p$ 个明文来保证至少找到一个正
   * 因此，匹配后的数量为 $2^{|k_{in}|+|k_{out}|+2m-m-m}=2^{|k_{in}|+|k_{out}|}$ 没变.
 
   
+
+## Improved Parallel Partition
+
+> from Section 4.1 of Paper [24-EC-Improved Differential Meet-in-the-Middle Cryptanalysis](https://link.springer.com/chapter/10.1007/978-3-031-58716-0_10)\
+
+
+
+### Truncated Differential (notes)
+
+在 improved Parallel Partition 之前，需要先厘清 truncated differential 是什么. 以下介绍几个小点，对比其与 differential (characteristic) 的不同：
+
+注意：$\Delta_{in}$ 和 $\Delta_{out}$ 可以不为差分特征，即 $|\Delta_{in}|\ge 1$ 和/或 $\Delta_{out}\ge 1$.
+
+1. 判断截断差分轨迹是否有效（将其与 PRP 对比）：
+   $$
+   P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})>P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})=\frac{|\Delta_{out}|}{n}
+   $$
+
+2. 截断差分有方向：
+   $$
+   P(\Delta_{in}\stackrel{E^{-1}}{\longrightarrow}\Delta_{out})=P(\Delta_{in}\stackrel{E}{\longrightarrow}\Delta_{out})\times \frac{|\Delta_{in}|}{|\Delta_{out}|}
+   $$
+
+3. 截断差分在组 Pairs 之后（全猜密钥）数据量为：
+
+   期望获得的正确 Pair 数量为 $s$ 
+   $$
+   s \times |\Delta_{in}|\ (resp. |\Delta_{out}|)
+   $$
+   
+
+
+
+
+
+<img src="https://github.com/user-attachments/assets/cac6c058-c804-423c-8010-9dd2b87fc7c1" width = "500" height = "300" div align=center />
