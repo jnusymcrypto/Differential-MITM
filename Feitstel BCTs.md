@@ -28,32 +28,37 @@ Some information and knowledge about Feistel BCTs
 
 * 对 $\beta^L$, 需要满足 $L_3\oplus L_4=\beta^L$, 这个推导是直接的, 不需要额外的条件:
   $$
+  
   L^3 \oplus L^4 = (L^3 \oplus L^1) \oplus (L^1 \oplus L^2) \oplus (L^2 \oplus L^4)
   = \gamma^R \oplus \beta^L \oplus \gamma^R = \beta^L.
+  
   $$
 
 * 对 $\color{red}{\beta^R}$, 需要满足 $R_3\oplus R_4=\beta^R$:
 
   用 $G_3,G_4$ 分别表示右侧两条路径的左侧输入, 因为右侧的路径是由反向 (自下而上) 传播过来的. 由: 
-  
   $$
+  
   \begin{aligned}
   &R^3=F(L^1 \oplus \gamma^R) \oplus G^3\\
   &R^4=F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus G^4\\
   &G^3=F(L^1) \oplus R^1 \oplus \gamma^L\\
   &G^4=F(L^1 \oplus \beta^L) \oplus (R^1 \oplus \beta^R) \oplus \gamma^L
-  \end{aligned}
+ \end{aligned}
+ 
   $$
   
 
   可进行如下推导: 
   
   $$
+  
   \begin{aligned}
   R^3 \oplus R^4 &= F(L^1 \oplus \gamma^R) \oplus G^3 \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus G^4 \\
   &= F(L^1 \oplus \gamma^R) \oplus F(L^1) \oplus R^1 \oplus \gamma^L \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus F(L^1 \oplus \beta^L) \oplus (R^1 \oplus \beta^R) \oplus \gamma^L \\
   &= \left[F(L^1 \oplus \gamma^R) \oplus F(L^1) \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus F(L^1 \oplus \beta^L)\right] \oplus \beta^R.
   \end{aligned}
+  
   $$
   
   所以为了让 $R^3\oplus R^4=\beta^R$, 上式最后一行需要满足以下关系:
@@ -62,4 +67,3 @@ Some information and knowledge about Feistel BCTs
   F(L^1) \oplus F(L^1 \oplus \gamma^R) \oplus F(L^1 \oplus \beta^L) \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) = 0.
   $$
   
-
