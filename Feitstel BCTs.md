@@ -63,7 +63,7 @@ $$
 F(L^1) \oplus F(L^1 \oplus \gamma^R) \oplus F(L^1 \oplus \beta^L) \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) = 0.
 $$
 
-所以，可以令 $\beta^L=\Delta_{i}, \gamma^R=\nabla_{o}$, 上式就可以写成:
+所以，可以令 $L^1=x, \beta^L=\Delta_{i}, \gamma^R=\nabla_{o}$, 上式就可以写成:
 
 $$
 S(x) \oplus S(x \oplus \Delta_i) \oplus S(x \oplus \nabla_o) \oplus S(x \oplus \Delta_i \oplus \nabla_o) = 0.
