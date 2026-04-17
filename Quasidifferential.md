@@ -14,12 +14,14 @@
 $$
 F(x)+F(x+a)=b
 $$
+
 固定 $a,b$, 对满足上式的 $x$, 将 $(a,b)$ 记作正确的差分对. 差分分布表定义:
 
 
 $$
 \operatorname{DDT}_{a,b}^F = \left|\left\{x \in \mathbb{F}_2^n \mid F(x) + F(x+a) = b\right\}\right| = 2^n \Pr[F(x) + F(x+a) = b]
 $$
+
 这里的假设是 **$x$ 是均匀随机**的, 差分概率 $p\gg 2^{-n}$, 对应数据复杂度 $\O(1/p)$.
 
 正是因为上面说的这种均匀随机假设, 多轮差分特征可以认为**轮间独立**, 记作:
@@ -32,12 +34,14 @@ $$
 & = \prod_{i=1}^T \Pr \left[ F_i(z_i) + F_i(z_i + a_i) = a_{i+1} \right]
 \end{aligned}
 $$
+
 也就是可以启发式独立, 用 DDT 算: (记为 *强假设差分概率公式*)
 
 
 $$
 \text{DDT}_{a_1, a_{r+1}}^{F} / 2^n = \sum_{a_2, \dots, a_r} \prod_{i=1}^r \text{DDT}_{a_i, a_{i+1}}^{F_i} / 2^n
 $$
+
 该公式计算的结果是近似的, 有一个极端反例, $F=F_2\circ F_1$, 其中 $F_2=F_1^{-1}$, 解释如下:
 
 * 设差分转移 $a\stackrel{F_1}{\rightarrow} b$ 概率为 $p$, 则 $b\stackrel{F_1^{-1}}{\rightarrow} a$ 概率为 $p$, 依照独立性假设, 计算得 $a\stackrel{F}{\rightarrow} a$ 概率为 $p^2$. $p<1$.
