@@ -62,11 +62,12 @@ something
 
 
 $$
-\delta_x(y) = 
-\begin{cases} 
-1 & \text{if } x = y \\ 
-0 & \text{if } x \neq y 
-\end{cases}
+\delta_x(y) = \left\{
+\begin{aligned}
+&1 && \text{if } x = y \\
+&0 && \text{if } x \neq y
+\end{aligned}
+\right.
 $$
 
 
