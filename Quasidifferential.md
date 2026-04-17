@@ -8,7 +8,7 @@
 
 ## 差分分析的 强假设
 
-对于一个差分转移: $F:\mathbb{F}_2^n \rightarrow \mathbb{F_2^m}$, 有输入, 输出差分 $(a,b)$, 则:
+对于一个差分转移：$F:\mathbb{F}_2^n \rightarrow \mathbb{F_2^m}$, 有输入, 输出差分 $(a,b)$, 则:
 
 
 $$
@@ -19,7 +19,7 @@ $$
 
 
 $$
-DDT_{a,b}^F = \left|\left\{x \in \mathbb{F}_2^n \mid F(x) + F(x+a) = b\right\}\right| = 2^n \Pr[F(x) + F(x+a) = b]
+{DDT}_{a,b}^F = \left|\left\{x \in \mathbb{F}_2^n \mid F(x) + F(x+a) = b\right\}\right| = 2^n \Pr[F(x) + F(x+a) = b]
 $$
 
 这里的假设是 **$x$ 是均匀随机**的, 差分概率 $p\gg 2^{-n}$, 对应数据复杂度 $\O(1/p)$.
