@@ -105,6 +105,7 @@ $$
 & = \chi_u(t)(\mathcal{F}_ng)(u)
 \end{aligned}
 $$
+
 ***Definition. Transition Matrix***
 
 $F: \mathbb{F}_2^n\rightarrow \mathbb{F}_2^m$. $T^F: \mathbb{R[F}_2^n]\rightarrow \mathbb{R[F}_2^m]$ 定义$\delta_x\rightarrow \delta_{F(x)}$ 为对于所有$x\in\mathbb{F}_2^n$ 定义的唯一线性算子. $F$的转移矩阵是$T^F$相对于$\mathbb{R[F}_2^n]$和$\mathbb{R[F}_2^m]$的标准基的坐标表示.
